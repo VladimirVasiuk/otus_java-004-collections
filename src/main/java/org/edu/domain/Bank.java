@@ -9,36 +9,19 @@ import java.util.*;
 public class Bank implements Serializable {
 
     private static final long serialVersionUID = -4157871135257285214L;
-    private final Set<Client> clients = new HashSet<Client>();
+    // TODO: private final ????? clients = new ?????<Client>();
 
 
     public Bank() {
     }
 
-    public void addClient(final Client client) throws ClientExistsException {
-        if (clients.contains(client)) {
-            throw new ClientExistsException("Client already exists into the bank");
-        }
-        clients.add(client);
-    }
+    // TODO: public void addClient(final Client client) throws ClientExistsException
 
-    public Set<Client> getClients() {
-        return Collections.unmodifiableSet(clients);
-    }
+    // public ????? getClients()
 
-    public Client getClient(String name) {
-        for (Client client : clients)
-            if (client.getName().equals(name))
-                return client;
-        return null;
-    }
+    // TODO: public Client getClient
 
-    public Collection<Account> getAccounts() {
-        Collection<Account> result = new HashSet<>();
-        for (Client client : clients)
-            result.addAll(client.getAccounts());
-        return result;
-    }
+    // TODO: public Collection<Account> getAccounts()
 }
 
 
